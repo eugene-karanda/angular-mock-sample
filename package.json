@@ -1,0 +1,31 @@
+{
+  "name": "angular-mock-sample",
+  "version": "1.0.0",
+  "description": "Sample application for karma, jasmine and angular-mocks",
+  "author": "Eugene Karanda <eugene,karanda@gmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "angular-mocks",
+    "jasmine",
+    "karma"
+  ],
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  },
+  "scripts": {
+    "test": "karma start"
+  }
+}

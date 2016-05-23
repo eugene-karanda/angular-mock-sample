@@ -1,0 +1,26 @@
+{
+  "name": "angular-mock-sample",
+  "description": "Sample application for karma, jasmine and angular-mocks",
+  "authors": [
+    "Eugene Karanda <eugene.karanda@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "angular-mocks",
+    "jasmine",
+    "karma"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-mocks": "^1.5.5"
+  }
+}
