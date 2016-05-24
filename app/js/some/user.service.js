@@ -5,15 +5,13 @@
         .service('UserService', UserService);
 
     function UserService() {
-        var service = {
+        return {
             getUsername: getUsername
         };
 
         function getUsername() {
             return 'Eugene';
         }
-
-        return service;
     }
 
 })();

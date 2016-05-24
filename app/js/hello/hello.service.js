@@ -5,14 +5,12 @@
         .service('HelloService', HelloService);
 
     function HelloService(UserService) {
-        var service = {
-            getMessage: getMessage
+        return {
+            getMessage: getMessage    
         };
-
+        
         function getMessage() {
             return 'Hello, ' + UserService.getUsername();
         }
-
-        return service;
     }
 })();
