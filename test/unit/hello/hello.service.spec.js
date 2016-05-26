@@ -7,15 +7,18 @@
         var HelloService;
         var UserService;
 
-        beforeEach(inject(function (_HelloService_, _UserService_) {
+        beforeEach(inject(function ($q, _HelloService_, _UserService_) {
             HelloService = _HelloService_;
             UserService = _UserService_;
-            spyOn(UserService, 'getUsername').and.returnValue('Jasmine');
+            spyOn(UserService, 'getUser').and.returnValue($q.when('Jasmine'));
         }));
 
         it('message must be equals to hello', function () {
-            expect(HelloService.getMessage()).toEqual('Hello, Jasmine');
-            expect(UserService.getUsername).toHaveBeenCalled();
+            HelloService.getMessage().then(function (message) {
+                expect(message).toEqual('Hello, Jasmine');
+            });
+
+            expect(UserService.getUser).toHaveBeenCalled();
         });
     });
 })();

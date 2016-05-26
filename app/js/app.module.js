@@ -1,6 +1,6 @@
 (function () {
     'use strict';
     
-    angular.module('angularMockSample', ['utils']);
+    angular.module('angularMockSample', []);
     
 })();

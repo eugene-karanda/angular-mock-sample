@@ -3,11 +3,15 @@
     
     angular.module('angularMockSample')
         .controller('HelloController', HelloController);
-    
-    function HelloController() {
+
+    function HelloController(HelloService) {
         var vm = this;
 
-        vm.message = 'Hello';
+        vm.message = 'Waiting for data';
+
+        HelloService.getMessage().then(function (message) {
+            vm.message = message;
+        });
     }
     
 })();
