@@ -8,10 +8,16 @@
     <script type="application/javascript" src="js/hello/hello.controller.js"></script>
     <script type="application/javascript" src="js/hello/hello.service.js"></script>
     <script type="application/javascript" src="js/user/user.service.js"></script>
+    <script type="application/javascript" src="js/greeting/greeting.controller.js"></script>
+    <script type="application/javascript" src="js/greeting/greeting.factory.js"></script>
 </head>
 <body ng-app="angularMockSample">
     <div ng-controller="HelloController as hello">
         {{hello.message}}
+    </div>
+
+    <div ng-controller="GreetingController">
+        {{message}}
     </div>
 </body>
 </html>

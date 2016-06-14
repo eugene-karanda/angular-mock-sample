@@ -4,7 +4,7 @@
     angular.module('angularMockSample')
         .service('HelloService', HelloService);
     
-    function HelloService($log, UserService) {
+    function HelloService(UserService) {
         return {
             getMessage: getMessage    
         };
@@ -14,7 +14,6 @@
         }
         
         function onSuccess(user) {
-            $log.debug(user);
             return 'Hello, ' + user.name + " "  + user.surname;
         }
     }

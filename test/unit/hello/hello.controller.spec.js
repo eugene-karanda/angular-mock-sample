@@ -4,12 +4,10 @@
     describe('HelloController', function () {
         beforeEach(module('angularMockSample'));
 
-        it('message must be equals to hello', inject(function ($q, $controller, _HelloService_) {
+        it('greeting must be equals to hello', inject(function ($q, $controller, HelloService) {
             var HelloController = $controller('HelloController', {});
-            var HelloService = _HelloService_;
-
-            spyOn(HelloService, 'getMessage').and.returnValue($q.when('Some message', function () {
-                expect(HelloController.message).toEqual('Some message');
+            spyOn(HelloService, 'getMessage').and.returnValue($q.when('Some greeting', function () {
+                expect(HelloController.message).toEqual('Some greeting');
             }));
 
             expect(HelloController.message).toEqual('Waiting for data');

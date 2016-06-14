@@ -13,7 +13,7 @@
             spyOn(UserService, 'getUser').and.returnValue($q.when('Jasmine'));
         }));
 
-        it('message must be equals to hello', function () {
+        it('greeting must be equals to hello', function () {
             HelloService.getMessage().then(function (message) {
                 expect(message).toEqual('Hello, Jasmine');
             });
